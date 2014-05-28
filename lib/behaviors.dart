@@ -15,8 +15,11 @@
 library behaviors;
 
 import 'dart:html';
+import 'dart:async';
 
 import 'package:active_query/active_query.dart';
+
+part 'behaviors/movable.dart';
 
 /**
  * Interface or base class for Behaviors.
