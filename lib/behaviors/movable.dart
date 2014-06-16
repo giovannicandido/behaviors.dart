@@ -21,6 +21,11 @@ class Movable extends Behavior {
       }),
       parent.onMouseMove.listen((MouseEvent event) {
         if (_dragging) {
+          // The element should not have negative margin, this afect the behavior when dragging
+          element.style.marginLeft = "0";
+          element.style.marginTop = "0";
+          element.style.marginBottom = "0";
+          element.style.marginRight = "0";
           element.style.left = '${event.client.x + _offset.x}px';
           element.style.top = '${event.client.y + _offset.y}px';
         }
